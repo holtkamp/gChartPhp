@@ -1,9 +1,11 @@
 <?php
-namespace gchart;
+namespace GChartPhp\Chart\PieChart;
+use GChartPhp\Chart\PieChart;
+
 /**
  * @brief Concentric Pie Chart
  */
-class gConcentricPieChart extends gPieChart
+class ConcentricPieChart extends PieChart
 {
     function __construct($width = 350, $height = 200)
     {

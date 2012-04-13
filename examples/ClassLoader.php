@@ -5,7 +5,7 @@
  * Code taken from Pheanstalk https://github.com/pda/pheanstalk/blob/master/classes/Pheanstalk/ClassLoader.php and modified
  *
  */
-class gChart_ClassLoader
+class Chart_ClassLoader
 {
   const PACKAGE = 'gchart';
 

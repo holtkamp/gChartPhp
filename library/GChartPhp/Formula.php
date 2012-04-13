@@ -1,6 +1,6 @@
 <?php
-namespace gchart;
-class gFormula extends gChart
+namespace GChartPhp;
+class Formula extends Chart
 {
     /**
      * @param $widht Integer It is set by default to 0 because the server will size the png automatically

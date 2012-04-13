@@ -1,6 +1,8 @@
 <?php
-namespace gchart;
-class gScatterChart extends gChart
+namespace GChartPhp\Chart;
+use GChartPhp\Chart;
+
+class ScatterChart extends Chart
 {
     function __construct($width = 200, $height = 200)
     {

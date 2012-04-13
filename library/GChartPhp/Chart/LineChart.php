@@ -1,6 +1,8 @@
 <?php
-namespace gchart;
-class gLineChart extends gChart
+namespace GChartPhp\Chart;
+use GChartPhp\Chart;
+
+class LineChart extends Chart
 {
     public function __construct($width = 200, $height = 200)
     {

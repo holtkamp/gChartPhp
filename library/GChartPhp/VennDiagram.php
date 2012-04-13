@@ -1,6 +1,6 @@
 <?php
-namespace gchart;
-class gVennDiagram extends gChart
+namespace GChartPhp;
+class VennDiagram extends Chart
 {
 
     private $sizes;

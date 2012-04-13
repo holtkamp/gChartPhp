@@ -1,5 +1,5 @@
 <?php
-namespace gchart;
+namespace GChartPhp;
 ini_set('display_errors','1');
 ?>
 <html>
@@ -15,11 +15,11 @@ img { display:block; }
 <h1>Quick examples.</h1>
 
 <?php
-require ('gChartInit.php');
+require ('ChartInit.php');
 ?>
 <h2>Pie Chart</h2>
 <?php
-$piChart = new gPieChart();
+$piChart = new PieChart();
 $piChart->addDataSet(array(112,315,66,40));
 $piChart->setLegend(array("first", "second", "third","fourth"));
 $piChart->setLabels(array("first", "second", "third","fourth"));
@@ -29,7 +29,7 @@ $piChart->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));
 <p>
 <em>code:</em><br>
 <code>
-$piChart = new gPieChar();<br>
+$piChart = new PieChar();<br>
 $piChart->addDataSet(array(112,315,66,40));<br>
 $piChart->setLegend(array("first", "second", "third","fourth"));<br>
 $piChart->setLabels(array("first", "second", "third","fourth"));<br>
@@ -38,7 +38,7 @@ $piChart->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));<br>
 </p>
 <h2>3D Pie Chart</h2>
 <?php
-$pie3dChart = new gPie3DChart();
+$pie3dChart = new Pie3DChart();
 $pie3dChart->addDataSet(array(112,315,66,40));
 $pie3dChart->setLegend(array("first", "second", "third","fourth"));
 $pie3dChart->setLabels(array("first", "second", "third","fourth"));
@@ -48,7 +48,7 @@ $pie3dChart->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));
 <p>
 <em>code:</em><br>
 <code>
-$pie3dChart = new gPie3DChart();<br>
+$pie3dChart = new Pie3DChart();<br>
 $pie3dChart->addDataSet(array(112,315,66,40));<br>
 $pie3dChart->setLegend(array("first", "second", "third","fourth"));<br>
 $pie3dChart->setLabels(array("first", "second", "third","fourth"));<br>
@@ -57,7 +57,7 @@ $pie3dChart->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));<br>
 </p>
 <h2>Concentric Pie Chart</h2>
 <?php
-$CPChart = new gConcentricPieChart();
+$CPChart = new ConcentricPieChart();
 $CPChart->addDataSet(array(112,315,66,40));
 $CPChart->addDataSet(array(100,235,346,50));
 $CPChart->addColors(array("008800", "880000"));
@@ -70,7 +70,7 @@ $CPChart->addLegend(array('1a', '2a', '3a', '4a'));
 <p>
 <em>code:</em><br>
 <code>
-$CPChart = new gConcentricPieChart();<br>
+$CPChart = new ConcentricPieChart();<br>
 $CPChart->addDataSet(array(112,315,66,40));<br>
 $CPChart->addDataSet(array(100,235,346,50));<br>
 $CPChart->addColors(array("008800", "880000"));<br>
@@ -81,7 +81,7 @@ $CPChart->addLegend(array('1a', '2a', '3a', '4a'));<br>
 </p>
 <h2>Line Chart</h2>
 <?php
-$lineChart = new gLineChart(300,300);
+$lineChart = new LineChart(300,300);
 $lineChart->addDataSet(array(112,315,66,40));
 $lineChart->addDataSet(array(212,115,366,140));
 $lineChart->addDataSet(array(112,95,116,140));
@@ -98,7 +98,7 @@ $lineChart->addBackgroundFill('c', '000000');
 <p>
 <em>code:</em><br>
 <code>
-$lineChart = new gLineChart(300,300);<br>
+$lineChart = new LineChart(300,300);<br>
 $lineChart->addDataSet(array(112,315,66,40));<br>
 $lineChart->addDataSet(array(212,115,366,140));<br>
 $lineChart->addDataSet(array(112,95,116,140));<br>
@@ -114,7 +114,7 @@ $lineChart->addBackgroundFill('c', '000000');<br>
 </p>
 <h2>Line Chart with Strip Fill</h2>
 <?php
-$lineChart = new gLineChart(300,300);
+$lineChart = new LineChart(300,300);
 $lineChart->addDataSet(array(112,315,66,40));
 $lineChart->addDataSet(array(212,115,366,140));
 $lineChart->addDataSet(array(112,95,116,140));
@@ -130,7 +130,7 @@ $lineChart->setStripFill('bg',0,array('CCCCCC',0.15,'FFFFFF',0.1));
 <p>
 <em>code:</em><br>
 <code>
-$lineChart = new gLineChart(300,300);<br>
+$lineChart = new LineChart(300,300);<br>
 $lineChart->addDataSet(array(112,315,66,40));<br>
 $lineChart->addDataSet(array(212,115,366,140));<br>
 $lineChart->addDataSet(array(112,95,116,140));<br>
@@ -145,7 +145,7 @@ $lineChart->setStripFill('bg',0,array('CCCCCC',0.15,'FFFFFF',0.1);<br>
 </p>
 <h2>Line Chart with Line Fill</h2>
 <?php
-$lineChart = new gLineChart(300,300);
+$lineChart = new LineChart(300,300);
 $lineChart->addDataSet(array(112,125,66,40));
 $lineChart->setLegend(array("first"));
 $lineChart->setColors(array("ff3344"));
@@ -159,7 +159,7 @@ $lineChart->addLineFill('B','76A4FB',0,0);
 <p>
 <em>code:</em><br>
 <code>
-$lineChart = new gLineChart(300,300);<br>
+$lineChart = new LineChart(300,300);<br>
 $lineChart->addDataSet(array(112,125,66,40));<br>
 $lineChart->setLegend(array("first"));<br>
 $lineChart->setColors(array("ff3344"));<br>
@@ -172,7 +172,7 @@ $lineChart->addLineFill('B','76A4FB',0,0);<br>
 </p>
 <h2>Line Chart with Grid Lines</h2>
 <?php
-$lineChart = new gLineChart(300,300);
+$lineChart = new LineChart(300,300);
 $lineChart->addDataSet(array(112,315,66,40));
 $lineChart->addDataSet(array(212,115,366,140));
 $lineChart->addDataSet(array(112,95,116,140));
@@ -188,7 +188,7 @@ $lineChart->setGridLines(33,10);
 <p>
 <em>code:</em><br>
 <code>
-$lineChart = new gLineChart(300,300);<br>
+$lineChart = new LineChart(300,300);<br>
 $lineChart->addDataSet(array(112,315,66,40));<br>
 $lineChart->addDataSet(array(212,115,366,140));<br>
 $lineChart->addDataSet(array(112,95,116,140));<br>
@@ -203,7 +203,7 @@ $lineChart->setGridLines(33,10);<br>
 </p>
 <h2>Grouped Bar Chart</h2>
 <?php
-$barChart = new gBarChart(500,150,'g');
+$barChart = new BarChart(500,150,'g');
 $barChart->addDataSet(array(112,315,66,40));
 $barChart->addDataSet(array(212,115,366,140));
 $barChart->addDataSet(array(112,95,116,140));
@@ -216,7 +216,7 @@ $barChart->setAutoBarWidth();
 <p>
 <em>code:</em><br>
 <code>
-$barChart = new gBarChart(500,150,'g');<br>
+$barChart = new BarChart(500,150,'g');<br>
 $barChart->addDataSet(array(112,315,66,40));<br>
 $barChart->addDataSet(array(212,115,366,140));<br>
 $barChart->addDataSet(array(112,95,116,140));<br>
@@ -228,7 +228,7 @@ $barChart->setAutoBarWidth();<br>
 </p>
 <h2>Horizontal Grouped Bar Chart</h2>
 <?php
-$barChart = new gBarChart(150,500,'g','h');
+$barChart = new BarChart(150,500,'g','h');
 $barChart->addDataSet(array(112,315,66,40));
 $barChart->addDataSet(array(212,115,366,140));
 $barChart->addDataSet(array(112,95,116,140));
@@ -241,7 +241,7 @@ $barChart->setLegend(array("This", "is", "different"));
 <p>
 <em>code:</em><br>
 <code>
-$barChart = new gBarChart(150,500,'g','h');<br>
+$barChart = new BarChart(150,500,'g','h');<br>
 $barChart->addDataSet(array(112,315,66,40));<br>
 $barChart->addDataSet(array(212,115,366,140));<br>
 $barChart->addDataSet(array(112,95,116,140));<br>
@@ -253,7 +253,7 @@ $barChart->setLegend(array("This", "is", "different"));<br>
 </p>
 <h2>Stacked Bar Chart</h2>
 <?php
-$barChart = new gStackedBarChart(450,350);
+$barChart = new StackedBarChart(450,350);
 $barChart->addDataSet(array(112,315,66,40));
 $barChart->addDataSet(array(212,115,366,140));
 $barChart->addDataSet(array(112,95,116,140));
@@ -265,7 +265,7 @@ $barChart->setTitle("A multiline\r\nA Title");
 <p>
 <em>code:</em><br>
 <code>
-$barChart = new gStackedBarChart(450,350);<br>
+$barChart = new StackedBarChart(450,350);<br>
 $barChart->addDataSet(array(112,315,66,40));<br>
 $barChart->addDataSet(array(212,115,366,140));<br>
 $barChart->addDataSet(array(112,95,116,140));<br>
@@ -289,7 +289,7 @@ $barChart->groupSpacerWidth = 10;
 </p>
 <h2>Venn Diagram</h2>
 <?php
-$vennDiagram = new gVennDiagram();
+$vennDiagram = new VennDiagram();
 $vennDiagram->setSizes(1120,3150);
 $vennDiagram->setIntersections(220, 320);
 $vennDiagram->setEncodingType('s');
@@ -299,7 +299,7 @@ $vennDiagram->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));
 <p>
 <em>code:</em><br>
 <code>
-$vennDiagram = new gVennDiagram();<br>
+$vennDiagram = new VennDiagram();<br>
 $vennDiagram->setSizes(1120,3150);<br>
 $vennDiagram->setIntersections(220, 320);<br>
 $vennDiagram->setEncodingType('s');<br>
@@ -308,7 +308,7 @@ $vennDiagram->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));<br>
 </p>
 <h2>Venn Diagram</h2>
 <?php
-$vennDiagram = new gVennDiagram();
+$vennDiagram = new VennDiagram();
 $vennDiagram->setSizes(20, 20, 20);
 $vennDiagram->setIntersections(0, 4, 6, 2);
 $vennDiagram->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));
@@ -317,7 +317,7 @@ $vennDiagram->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));
 <p>
 <em>code:</em><br>
 <code>
-$vennDiagram = new gVennDiagram();<br>
+$vennDiagram = new VennDiagram();<br>
 $vennDiagram->setSizes(10, 10, 10);<br>
 $vennDiagram->setIntersections(2, 2, 2, 1);<br>
 $vennDiagram->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));<br>
@@ -325,33 +325,33 @@ $vennDiagram->setColors(array("ff3344", "11ff11", "22aacc", "3333aa"));<br>
 </p>
 <h2>Latex Formula</h2>
 <?php
-$latex = new gFormula();
+$latex = new Formula();
 $latex -> setLatexCode('\cos(x)^2+\sin(x)^2=1');
 ?>
 <img src="<?php print $latex->getUrl();  ?>" /> <br> latex formula using the gFormula class.
 <p>
 <em>code:</em><br>
 <code>
-$latex = new gFormula();<br>
+$latex = new Formula();<br>
 $latex -> setLatexCode('\cos(x)^2+\sin(x)^2=1');<br>
 </code>
 </p>
 <h2>QR Code</h2>
 <?php
-$qr = new gQRCode();
+$qr = new QRCode();
 $qr -> setQRCode('gChartPhp is awesome!');
 ?>
 <img src="<?php print $qr->getUrl();  ?>" /> <br> QR Code using the gQRCode class.
 <p>
 <em>code:</em><br>
 <code>
-$qr = new gQRCode();<br>
+$qr = new QRCode();<br>
 $qr -> setQRCode('gChartPhp is awesome!');<br>
 </code>
 </p>
 <h2>Google-o-Meter</h2>
 <?php
-$meter = new gMeterChart();
+$meter = new MeterChart();
 $meter -> addDataSet(array(10, 50, 90));
 $meter -> setColors(array('FFFFFF','000000'));
 ?>
@@ -359,14 +359,14 @@ $meter -> setColors(array('FFFFFF','000000'));
 <p>
 <em>code:</em><br>
 <code>
-$meter = new gMeterChart();<br>
+$meter = new MeterChart();<br>
 $meter -> addDataSet(array(10, 50, 90));<br>
 $meter -> setColors('FFFFFF','000000');<br>
 </code>
 </p>
 <h2>Map Chart</h2>
 <?php
-$map = new gMapChart();
+$map = new MapChart();
 $map -> setZoomArea('usa');
 $map -> setStateCodes(array('CA', 'TX', 'NY', 'UT', 'NV'));
 $map -> addDataSet(array(23, 32, 12, 54, 23));
@@ -376,7 +376,7 @@ $map -> setColors('342544', array('BE3481','34BE12'));
 <p>
 <em>code:</em><br>
 <code>
-$map = new gMapChart();<br>
+$map = new MapChart();<br>
 $map -> setZoomArea('usa');<br>
 $map -> setStateCodes(array('CA', 'TX', 'NY', 'UT', 'NV'));<br>
 $map -> addDataSet(array(23, 32, 12, 54, 23));<br>
@@ -385,7 +385,7 @@ $map -> setColors('342544', array('BE3481','34BE12'));<br>
 </p>
 <h2>Scatter Chart</h2>
 <?php
-$scatter = new gScatterChart();
+$scatter = new ScatterChart();
 $scatter -> addDataSet(array(12,87,75,41,23,96,68,71,34,9));
 $scatter -> addDataSet(array(98,60,27,34,56,79,58,74,18,76));
 $scatter -> addValueMarkers('d','FF0000',0,-1,15);
@@ -397,7 +397,7 @@ $scatter -> addAxisRange(1, 0, 100);
 <p>
 <em>code:</em><br>
 <code>
-$scatter = new gScatterChart();<br>
+$scatter = new ScatterChart();<br>
 $scatter -> addDataSet(array(12,87,75,41,23,96,68,71,34,9));<br>
 $scatter -> addDataSet(array(98,60,27,34,56,79,58,74,18,76));<br>
 $scatter -> addValueMarkers('d','FF0000',0,-1,15);<br>
@@ -408,7 +408,7 @@ $scatter -> addAxisRange(1, 0, 100);<br>
 </p>
 <h2>Grouped Bar Chart</h2>
 <?php
-$barChart = new gBarChart(250,250,'s');
+$barChart = new BarChart(250,250,'s');
 $barChart->addDataSet(array(0,10,20,30,20,70,80));
 $barChart->addDataSet(array(0,20,10,5,20,30,10));
 $barChart->addHiddenDataSet(array(10,0,20,15,60,40,30));
@@ -419,7 +419,7 @@ $barChart->setAutoBarWidth();
 <p>
 <em>code:</em><br>
 <code>
-$barChart = new gBarChart(250,250,'s');<br>
+$barChart = new BarChart(250,250,'s');<br>
 $barChart->addDataSet(array(0,10,20,30,20,70,80));<br>
 $barChart->addDataSet(array(0,20,10,5,20,30,10));<br>
 $barChart->addHiddenDataSet(array(10,0,20,15,60,40,30));<br>
@@ -429,7 +429,7 @@ $barChart->setAutoBarWidth();<br>
 </p>
 <h2>Candlestick Chart</h2>
 <?php
-$candlestick = new gLineChart(200,125);
+$candlestick = new LineChart(200,125);
 $candlestick -> addDataSet(array(90,80,70,50,40,30,20,10));
 $candlestick -> addHiddenDataSet(array(0,5,10,0,5,10,0));
 $candlestick -> addHiddenDataSet(array(2,15,20,5,15,40,0));
@@ -443,7 +443,7 @@ $candlestick -> addAxisRange(0, 0, 100);
 <p>
 <em>code:</em><br>
 <code>
-$candlestick = new gLineChart(200,125);<br>
+$candlestick = new LineChart(200,125);<br>
 $candlestick -> addDataSet(array(90,80,70,50,40,30,20,10));<br>
 $candlestick -> addHiddenDataSet(array(0,5,10,0,5,10,0));<br>
 $candlestick -> addHiddenDataSet(array(2,15,20,5,15,40,0));<br>

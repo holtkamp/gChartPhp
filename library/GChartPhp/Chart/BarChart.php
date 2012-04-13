@@ -1,8 +1,8 @@
 <?php
-namespace gchart;
+namespace GChartPhp\Chart;
+use GChartPhp\Chart;
 
-
-class gBarChart extends gChart
+class BarChart extends Chart
 {
     /**
      * @brief Constructor for the gBarChart
@@ -19,15 +19,18 @@ class gBarChart extends gChart
         $this->setChartType($type, $direction);
         $this->setDimensions($width, $height);
     }
+    
     protected function setChartType($type, $direction)
     {
         $this-> setProperty('cht', 'b'.$direction.$type);
     }
+    
     public function getUrl()
     {
         $retStr = parent::getUrl();
         return $retStr;
     }
+    
     /**
      * @brief Specifies custom values for bar widths and spacing between bars and groups.
      *

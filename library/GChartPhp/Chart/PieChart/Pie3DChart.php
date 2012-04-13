@@ -1,9 +1,11 @@
 <?php
-namespace gchart;
+namespace GChartPhp\Chart\PieChart;
+use GChartPhp\Chart\PieChart;
+
 /**
  * @brief 3-dimensional Pie Chart
  */
-class gPie3DChart extends gPieChart
+class Pie3DChart extends PieChart
 {
     function __construct($width = 500, $height = 200)
     {

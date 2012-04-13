@@ -1,5 +1,5 @@
 <?php
-namespace gchart;
+namespace GChartPhp;
 /**
  * @brief Main class
  *
@@ -7,7 +7,7 @@ namespace gchart;
  *
  * @version 0.5.2
  */
-class gChart
+class Chart
 {
     /**
      * @brief This variable holds all the chart information.
@@ -175,7 +175,7 @@ class gChart
             return $data;
         }
         $encodedData = array();
-        $max = utility::getMaxOfArray($data);
+        $max = Utility::getMaxOfArray($data);
         if ($max > 100)
         {
             $rate = $max / 100;
@@ -211,7 +211,7 @@ class gChart
     private function simpleEncodeData($data)
     {
         $encode_string='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        $max = utility::getMaxOfArray($data);
+        $max = Utility::getMaxOfArray($data);
         $encodedData = array();
         if ($max > 61)
         {
@@ -263,7 +263,7 @@ class gChart
     private function extendedEncodeData($data)
     {
         $encode_string='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-.';
-        $max = utility::getMaxOfArray($data);
+        $max = Utility::getMaxOfArray($data);
         $encodedData = array();
         if ($max > 4095)
         {

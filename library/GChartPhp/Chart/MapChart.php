@@ -1,6 +1,8 @@
 <?php
-namespace gchart;
-class gMapChart extends gChart
+namespace GChartPhp\Chart;
+use GChartPhp\Chart;
+
+class MapChart extends Chart
 {
     /**
      * @brief Map Chart constructor.

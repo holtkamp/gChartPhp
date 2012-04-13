@@ -1,6 +1,8 @@
 <?php
-namespace gchart;
-class gPieChart extends gChart
+namespace GChartPhp\Chart;
+use GChartPhp\Chart;
+
+class PieChart extends Chart
 {
     public function __construct($width = 350, $height = 200)
     {

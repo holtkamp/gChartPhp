@@ -1,6 +1,8 @@
 <?php
-namespace gchart;
-class gMeterChart extends gChart
+namespace GChartPhp\Chart;
+use GChartPhp\Chart;
+
+class MeterChart extends Chart
 {
     /**
      * @brief Google-o-Meter Chart constructor.

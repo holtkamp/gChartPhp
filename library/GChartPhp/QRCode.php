@@ -1,6 +1,6 @@
 <?php
-namespace gchart;
-class gQRCode extends gChart
+namespace GChartPhp;
+class QRCode extends Chart
 {
 
     function __construct($width = 150, $height = 150)
